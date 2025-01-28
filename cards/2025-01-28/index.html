@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="author" content="小白鼠">
+  <title>2025 新春贺卡</title>
+  <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+  <script type="text/javascript" src="https://cdn.staticfile.org/jquery/3.6.0/jquery.min.js"></script>
+  <script type="text/javascript">
+    function login() {
+      let name = document.getElementById('name').value;
+      let date = document.getElementById('date').value;
+      window.location.href = `./${name}/index.html?name=${name}&date=${date}`;
+    }
+  </script>
+  <!--<meta http-equiv="Refresh" content="3;url=redirected_to" />-->
+  <link rel="stylesheet" type="text/css" href="./../../css/normalize.css" />
+  <style type="text/css">
+    .page-header {
+      display: block;
+      border: none;
+      padding: 5rem, 6rem;
+      color: #fff;
+      text-align: center;
+      background-color: #159957;
+      background-image: linear-gradient(120deg, #155799, #159957);
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .vcenter {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .inputbox {
+      border-radius: 5px;
+      background-color: gainsboro;
+      border: none;
+      text-align: center;
+      margin: 5px auto;
+      font-size: larger;
+      transition: background-color 0.5s ease 0s;
+    }
+
+    .inputbox:hover {
+      outline: none;
+      background-color: lightblue;
+    }
+
+    .inputbox:focus {
+      outline: none;
+      background-color: lightblue;
+    }
+
+    tr {
+      text-align: center;
+    }
+
+    .btn1 {
+      background-color: #1ab869;
+      transition: background-color 0.5s ease 0s;
+      cursor: default;
+      border: none;
+      border-radius: 5px;
+      padding: 50px, 1em !important;
+    }
+
+    .btn1:hover {
+      background-color: #088b4a;
+    }
+
+    .btn {
+      font-size: larger;
+      transition: background-color 0.5s ease 0s;
+      min-width: 6em;
+    }
+
+    .btn:hover {
+      background-color: #37ce82 !important;
+    }
+  </style>
+</head>
+
+<body style="border: none; padding: 0; margin: 0;">
+  <header class="page-header">
+    <h1 class="project-name">2025 新春贺卡</h1>
+    <h2 class="project-tagline">新春快乐</h2>
+    <!--<a target="_blank" href="." class="btn">博客</a>-->
+  </header>
+  <main class="content">
+    <div style="margin:1em auto; text-align:center; width:80%">
+      <table style="margin: auto">
+        <tbody>
+          <tr>
+            <td><label for="year">姓名首字母：</label></td>
+            <td><input class="inputbox" type="text" id="name" placeholder="wxh"></td>
+          </tr>
+          <tr>
+            <td><label for="area">加好友时间：</label></td>
+            <td><input class="inputbox" type="text" id="date" placeholder="20250128"></td>
+          </tr>
+        </tbody>
+      </table>
+      <span style="display: block; font-size: 12px; margin: 1em">Tips: 加好友时间是微信、QQ、钉钉中最早的一个</span>
+      <button class="btn" style="background-color: #159957;" id="jump" type="button"
+        onclick="login();">Go</button>
+      <br>
+      <br>
+    </div>
+  </main>
+
+</body>
+
+</html>

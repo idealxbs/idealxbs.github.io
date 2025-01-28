@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>新春贺卡</title>
+  <!-- Google Font-->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="./../card_lib/style.css" />
+  <script type="text/javascript">
+    function GetQueryString(name) {
+      var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+      var r = decodeURI(window.location.search).substr(1).match(reg);
+      if (r != null) return unescape(r[2]);
+      return null;
+    }
+
+    window.onload = function () {
+      let name = GetQueryString("name");
+      let date = GetQueryString("date");
+      let passed = document.getElementById('passed');
+      let unauth = document.getElementById('unauth');
+      if (date === '20240223') {
+        passed.style.display = 'block';
+        unauth.style.display = 'none';
+        document.getElementById('presenter1').href = `./card.html?name=${name}`;
+      }
+      else {
+        passed.style.display = 'none';
+        unauth.style.display = 'block';
+      }
+    }
+
+  </script>
+</head>
+
+<body style="background-color: #006efd; text-align: center; ">
+  <div id="unauth" style="text-align: center; display: none;">
+    <div style="text-align: center; padding: 10%;">
+      <p style="color: white; text-align: center; ">Oops! 输入的日期不正确。请检查是否是最早的日期（微信、钉钉、QQ 中最早的日期）</p>
+    </div>
+  </div>
+  <div id="passed" class="card" style="display: none;">
+    <div class="outside">
+      <div class="front">
+        <p>Happy Spring Festival</p>
+        <!--<div class="cake">
+            <div class="top-layer"></div>
+            <div class="middle-layer"></div>
+            <div class="bottom-layer"></div>
+            <div class="candle"></div>
+          </div>-->
+        <p>点击以打开</p>
+      </div>
+      <div class="back"></div>
+    </div>
+    <div class="inside">
+      <p>Hi, 穆怡然<br />新年快乐！这是你的贺卡</p>
+      <a id="presenter1" href="./card.html"><img src="./../card_lib/gift.svg" style="text-align: center; " /></a>
+    </div>
+  </div>
+</body>
+
+</html>
