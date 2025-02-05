@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="author" content="小白鼠">
+  <title>ywy's zone</title>
+  <link href="/lib/images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+  <script type="text/javascript" src="https://cdn.staticfile.org/jquery/3.6.0/jquery.min.js"></script>
+  <script type="text/javascript">
+    function login() {
+      let name = document.getElementById('name').value;
+      let date = document.getElementById('date').value;
+      window.location.href = `./${name}/index.html?name=${name}&date=${date}`;
+    }
+  </script>
+  <!--<meta http-equiv="Refresh" content="3;url=redirected_to" />-->
+  <link rel="stylesheet" type="text/css" href="/lib/css/normalize.css" />
+  <link rel="stylesheet" type="text/css" href="/lib/css/blog.css" />
+</head>
+
+<body style="border: none; padding: 0; margin: 0;">
+  <header class="page-header">
+    <h1 class="project-name">ywy's zone</h1>
+    <h2 class="project-tagline">Special Zone</h2>
+    <!--<a target="_blank" href="." class="btn">博客</a>-->
+    <a target="_blank" href="https://pan.quark.cn/s/e1320b4f9258" class="btn">学习资料</a>
+  </header>
+  <main id="content" class="main-content">
+    <p style="font-size: smaller;">Tips: 尽量周更，链接不变，内容自动更新</p>
+    <footer class="site-footer">
+      2025-02-05, 小白鼠
+    </footer>
+  </main>
+</body>
+
+</html>
